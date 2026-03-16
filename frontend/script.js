@@ -17,7 +17,7 @@ function capture() {
     const data = canvas.toDataURL("image/jpeg")
 
     // For local setup use: http://127.0.0.1:8000/predict or http://localhost:8000/predict
-    fetch("https://age-prediction-app.onrender.com", {
+    fetch("https://age-prediction-app.onrender.com/predict", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ image: data.split(',')[1] })
