@@ -22,7 +22,8 @@ app.add_middleware(
 )
 
 print("Loading model...")
-model = tf.keras.models.load_model("../model/age_model.keras")
+# For local setup use: ../model/age_model.keras
+model = tf.keras.models.load_model("model/age_model.keras")
 print("Model loaded.")
 
 age_labels = [
